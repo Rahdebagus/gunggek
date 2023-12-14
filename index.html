@@ -12,7 +12,7 @@ TikTok: rayyarr_
 
 <div id='Content'><p id="idgeser"></p>
 
-<div><blockquote id='bq'><img id="foto1" src="/wahde.jpg"/><img id="foto2" src="/wahde.jpg"/><img id="foto3" src="/wahde.jpg"/><p id="katakata"></p><p id="katabawah"></p><p id="akhiran" onClick="menuju();">[ Kirim WhatsApp &#128157; ]</p></blockquote></div>
+<div><blockquote id='bq'><img id="foto1" src="wahde.jpg"/><img id="foto2" src="wahde.jpg"/><img id="foto3" src="wahde.jpg"/><p id="katakata"></p><p id="katabawah"></p><p id="akhiran" onClick="menuju();">[ Kirim WhatsApp &#128157; ]</p></blockquote></div>
 
 <div id="contTom" style="display:none;"><a id="By" class='button' onClick="terima()"></i>Sayang</a><b id='buttonv2'></b><a id="Bn" class='button' onClick="tolak()"></i>Engga</a></div>
 </div>
@@ -67,14 +67,14 @@ TikTok: rayyarr_
 			async function menuju(){if(fungsi==2){await swals.fire('Kirim pesan ke WhatsApp aku, ya!');window.location = "https://api.whatsapp.com/send?phone=+6289686000991&text=Aku Sayang Rsii <3, " + pesanwhatsapp;}}
 
             async function mulaitanya(){
-            	var { isConfirmed: tanyawal } = await swals.fire({title: `Mau isi nama dulu atau langsung aja?`, imageUrl: '/wahde.jpg', imageWidth: 120, imageHeight: 120, confirmButtonText: 'Isi Nama', cancelButtonText: 'Langsung Aja', allowOutsideClick: false, showCancelButton: true,
+            	var { isConfirmed: tanyawal } = await swals.fire({title: `Mau isi nama dulu atau langsung aja?`, imageUrl: 'wahde.jpg', imageWidth: 120, imageHeight: 120, confirmButtonText: 'Isi Nama', cancelButtonText: 'Langsung Aja', allowOutsideClick: false, showCancelButton: true,
                 });if(tanyawal){mulai();} else {nama = 'Kamu';lanjut();play();}
             }
 
             async function mulai(){
                 var { value: nama } = await swals.fire({
                     title: 'Masukin nama kamu', input: 'text',
-                    imageUrl: '/wahde.jpg', imageWidth: 120, imageHeight: 120, allowOutsideClick: false, showCancelButton: false,
+                    imageUrl: 'wahde.jpg', imageWidth: 120, imageHeight: 120, allowOutsideClick: false, showCancelButton: false,
                 });
                 if(nama && nama.length < 11){
                 	window.nama = nama;lanjut();play();
